@@ -19,6 +19,7 @@
                                 <td><%= m.title %></td> 
                                 <td><%= m.content %></td>
                                 <td><%= link_to "Editar mensagem", edit_message_path(m), class: "btn btn-xs btn-warning" %></td>
+                                <td><%= link_to "Visualizar mensagem", message_path(m), class: "btn btn-xs btn-primary" %></td>
                                 <td><%= link_to "Deletar mensagem", message_path(m), class: "btn btn-xs btn-danger", method: :delete, data: {confirm: "Are you sure?"} %></td>
                             </tr>
                         <% end %> 

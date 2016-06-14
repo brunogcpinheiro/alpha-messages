@@ -27,3 +27,11 @@ a:hover {
 td, th {
     padding: 10px;
 }
+
+.menu_links {
+    border-bottom: 2px solid transparent;
+}
+
+.menu_links:hover {
+    border-bottom: 2px solid rgba(26, 188, 156,1.0);
+}

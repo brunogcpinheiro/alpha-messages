@@ -1,0 +1,13 @@
+<h1 align="center">Detalhe da mensagem</h1>
+
+<h2 align="center"><strong>Título.:</strong></h2>
+<h3 align="center"><%= @message.title %></h3>
+<hr></hr>
+<h2 align="center"><strong>Conteúdo.:</strong></h2>
+<h3 align="center"><%= @message.content %></h3>
+<hr></hr>
+<div class="col-md-offset-3 col-md-6">
+    <%= link_to "Editar mensagem", edit_message_path(@message), class: "btn btn-warning" %>
+    <%= link_to "Voltar para mensagens", messages_path, class: "btn btn-info" %>
+    <%= link_to "Deletar mensagem", message_path(@message), class: "btn btn-danger", method: :delete, data: {confirm: "Are you sure?"} %>
+</div>
