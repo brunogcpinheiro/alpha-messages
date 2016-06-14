@@ -1,0 +1,30 @@
+<h1 align="center">Editar mensagem!</h1>
+<%= render 'shared/errors' %>
+<br></br>
+<div class="row">
+    <div class="col-md-8">
+        <%= form_for(@message, :html => {class: "form-horizontal", role: "form"}) do |f| %>
+            <div class="form-group">
+                <div class="control-label col-md-2">
+                    <%= f.label :title %>
+                </div>
+                <div class="col-md-8">
+                    <%= f.text_field :title, class: "form-control", placeholder: "Entre com um título", autofocus: true %> 
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="control-label col-md-2">
+                    <%= f.label :content %>
+                </div>
+                <div class="col-md-8">
+                    <%= f.text_area :content, class: "form-control", placeholder: "Entre com a mensagem", rows: 10 %>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-4">
+                    <%= f.submit "Editar mensagem", :class => "btn btn-info" %>
+                </div>
+            </div>
+        <% end %>
+    </div>
+</div>

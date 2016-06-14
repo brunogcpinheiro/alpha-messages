@@ -1,0 +1,28 @@
+<h1 align="center">Todas as mensagens!</h1>
+<br>
+
+<h3 align="center"><%= link_to "Criar nova mensagem", new_message_path, class: "btn btn-success" %></h3>
+<br>
+<div class="row">
+    <div class="well">
+        <table>
+            <thead>
+                <tr>
+                    <th>Título</th>
+                    <th>Conteúdo</th>
+                </tr>
+            </thead>
+                <tbody>
+                    <div class="table">
+                       <% @messages.each do |m| %>
+                            <tr>
+                                <td><%= m.title %></td> 
+                                <td><%= m.content %></td>
+                                <td><%= link_to "Editar mensagem", edit_message_path(m), class: "btn btn-xs btn-warning" %></td>
+                            </tr>
+                        <% end %> 
+                    </div>
+            </tbody>
+        </table>
+    </div>
+</div>
