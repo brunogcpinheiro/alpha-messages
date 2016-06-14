@@ -34,6 +34,13 @@ class MessagesController < ApplicationController
       end
    end
    
+   def destroy
+      @message = Message.find(params[:id])
+      @message.destroy
+      flash[:success] = "Mensagem excluída com sucesso"
+      redirect_to messages_path
+   end
+   
    private
    def message_params
       params.require(:message).permit(:title, :content) 
